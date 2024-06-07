@@ -290,7 +290,7 @@ namespace orc {
     std::string typeStr = "struct<a:int,b:string,c:decimal(10,2),d:varchar(5)>";
     std::unique_ptr<Type> type = Type::buildTypeFromString(typeStr);
     EXPECT_EQ(typeStr, type->toString());
-
+  
     typeStr = "map<boolean,float>";
     type = Type::buildTypeFromString(typeStr);
     EXPECT_EQ(typeStr, type->toString());
